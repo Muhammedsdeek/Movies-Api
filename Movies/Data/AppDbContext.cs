@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Movies.Entities;
 
 namespace Movies.Data
 {
-	public class AppDbContext: DbContext
+	public class AppDbContext:    IdentityDbContext<AppUser>       //DbContext
 	{
 
 	
@@ -16,7 +17,7 @@ namespace Movies.Data
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 
-			
+		
 
 
 
